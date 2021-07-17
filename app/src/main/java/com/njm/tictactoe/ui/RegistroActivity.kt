@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 import com.njm.tictactoe.R
 
 class RegistroActivity : AppCompatActivity() {
@@ -61,10 +62,8 @@ class RegistroActivity : AppCompatActivity() {
             }else if(contraseña.isEmpty()){
                 txtContraseña.error = "La contraseña es obligatoria"
             }else{
-                //todo: realizar registro en firebase Auth
                 createUser()
             }
-
         }
     }
 

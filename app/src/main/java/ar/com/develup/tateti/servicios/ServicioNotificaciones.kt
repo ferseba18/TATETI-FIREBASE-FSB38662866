@@ -6,15 +6,13 @@ import android.content.Context
 import android.content.Intent
 import android.media.RingtoneManager
 import androidx.core.app.NotificationCompat
-import ar.com.develup.tateti.R
+import androidx.core.content.ContextCompat.getSystemService
 import ar.com.develup.tateti.actividades.ActividadInicial
-import com.google.firebase.messaging.FirebaseMessagingService
-import com.google.firebase.messaging.RemoteMessage
 
 
 
 class ServicioNotificaciones : FirebaseMessagingService() {
-    override fun onMessageReceived(remoteMessage: RemoteMessage) {
+    fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)
         if (remoteMessage.data != null) {
             mostrarNotificacion(remoteMessage.data)

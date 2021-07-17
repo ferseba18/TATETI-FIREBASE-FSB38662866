@@ -17,8 +17,6 @@ import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.remoteconfig.ktx.remoteConfig
-import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 
 public class ActividadInicial : AppCompatActivity() {
     val database = Firebase.database
@@ -38,18 +36,12 @@ public class ActividadInicial : AppCompatActivity() {
         olvideMiContrasena().setOnClickListener { olvideMiContrasena() }
 
 
-
         if (usuarioEstaLogueado()) {
-            // Si el usuario esta logueado, se redirige a la pantalla
-            // de partidas
             verPartidas()
-
         }
         actualizarRemoteConfig()
         auth = FirebaseAuth.getInstance()
-
     }
-
 
     private fun usuarioEstaLogueado(): Boolean {
 
@@ -103,9 +95,9 @@ public class ActividadInicial : AppCompatActivity() {
             .addOnCompleteListener {
                 val botonOlvideHabilitado = Firebase.remoteConfig.getBoolean("olvideMiContrasena")
                 if (botonOlvideHabilitado) {
-                    olvideMiContrasena.visibility = View.VISIBLE
+                    olvideMiContrasena().visibility = View.VISIBLE
                 } else {
-                    olvideMiContrasena.visibility = View.GONE
+                    olvideMiContrasena().visibility = View.GONE
                 }
 
             }
@@ -117,7 +109,7 @@ public class ActividadInicial : AppCompatActivity() {
 
         // Si no completo el email, muestro mensaje de error
         if (email.isEmpty()) {
-            Snackbar.make(rootView!!, "Completa el email", Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(rootView, "Completa el campo E-mail", Snackbar.LENGTH_SHORT).show()
         } else {
 
             // Si completo el mail debo enviar un mail de reset
@@ -216,7 +208,7 @@ public class ActividadInicial : AppCompatActivity() {
             verPartidas()
         } else {
             desloguearse()
-            Snackbar.make(rootView!!, "Verifica tu email para continuar", Snackbar.LENGTH_SHORT)
+            Snackbar.make(rootView!!, "Debes verificar tu Email", Snackbar.LENGTH_SHORT).show()
                 .show()
         }
 
