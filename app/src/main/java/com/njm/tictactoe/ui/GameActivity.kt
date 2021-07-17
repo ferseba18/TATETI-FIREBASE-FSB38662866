@@ -3,9 +3,7 @@ package com.njm.tictactoe.ui
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import com.njm.tictactoe.R
-
-import kotlinx.android.synthetic.main.activity_game.*
+import com.example.myapplication.R
 
 class GameActivity : AppCompatActivity() {
 

@@ -7,14 +7,12 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import ar.com.develup.tateti.R
 import ar.com.develup.tateti.modelo.Constantes
 import ar.com.develup.tateti.modelo.Movimiento
 import ar.com.develup.tateti.modelo.Partida
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.actividad_partida.*
 import java.lang.ref.Reference
 import java.util.*
 

@@ -8,8 +8,8 @@ class MyApp : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        //inicializar el servicio de firebase cuando inicia la app
-        //para que se aplique esto, en el manifest lo declaramos: android:name=".app.MyApp"
+        //para inicializar el servicio de firebase en la app,
+        //Aplicar en el manifest android:name=".app.MyApp"
         FirebaseApp.initializeApp(this)
     }
 }

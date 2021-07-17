@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import ar.com.develup.tateti.R
 import ar.com.develup.tateti.actividades.ActividadPartida
 import ar.com.develup.tateti.actividades.ActividadPartidas
 import ar.com.develup.tateti.modelo.Constantes

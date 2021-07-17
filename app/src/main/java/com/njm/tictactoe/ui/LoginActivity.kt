@@ -6,9 +6,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import com.example.myapplication.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.njm.tictactoe.R
 import com.njm.tictactoe.ui.RegistroActivity
 
 class LoginActivity : AppCompatActivity() {
